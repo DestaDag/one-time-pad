@@ -13,8 +13,6 @@ def encrypt(text, key_text):
     enc = [(ord(a) ^ ord(b)) for a, b in zip(text, key_text)]
     print(enc)
     for i in range(len(enc)):
-        #if enc[i] > 26:
-            #enc[i] = enc[i] %26
         enc[i] = chr((enc[i]+ 96))
     return ''.join(enc)
 
